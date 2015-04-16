@@ -56,7 +56,7 @@ class Session(models.Model):
 					'message': "incremente los asientos o remueva algunos alumnos",
 				},
 			}
-			#probando
+			#probando ahora desde archivo online
 
 
 
