@@ -1,5 +1,6 @@
 <openerp>
     <data>
+    
     <record model="ir.actions.act_window" id="cursos_list_action">
         <field name="name">Cursos</field>
         <field name="res_model">cursos.course</field>
@@ -22,28 +23,27 @@
 					<group>
 						<field name="name"></field>
                         <field name="Horas"></field>
+                        <field name="profesor_id"></field>
 					</group>
 					<notebook>
-						<page string="Encargado del dictado de clases">
-                            <field name="profesor_id"/>
-                        </page>
+                        <page string="Sesiones">
+                            <field name="session_ids">
+                                <tree string="Registrar sesion"> 
+                                    <field name="name"/>
+                                    <field name="duracion"></field>
+                                    <field name="seats"/>
+                                    <field name="fecha_inicio"/>
+                                    <field name="instructor_id"/>
+                                </tree>
+                            </field>
+                        </page>                       
                         <page string="Información Sobre el curso">
 							<field name="description"/>
 						</page>
                         <page string="Temas a tratar">
                             <field name="temas"/>
                         </page>
-                        <page string="Sesiones">
-                            <field name="session_ids">
-                                <tree string="Registrar sesion"> 
-                                    <field name="name"/>
-                                    <field name="duracion"></field>
-                                    <field name="asientos"/>
-                                    <field name="fecha_inicio"/>
-                                </tree>
-                            </field>
-                        </page>
-					</notebook>
+                    </notebook>
 				</sheet>
 			</form>
 		</field> 
@@ -83,11 +83,12 @@
                         <field name="course_id"/>
                         <field name="name"/>
                         <field name="active"/>
+                        <field name="instructor_id"/>
                     </group>
                     <group string="Horario">
                         <field name="fecha_inicio"/>
                         <field name="duracion"/>
-                        <field name="asientos"/>
+                        <field name="seats"/>
                         <field name="taken_seats" widget="progressbar"/>
                     </group>
                     <label for="alumnos_ids"/>

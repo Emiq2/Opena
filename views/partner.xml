@@ -5,14 +5,9 @@
 			<field name="model">res.partner</field>
 			<field name="inherit_id" ref="base.view_partner_form"/>
 			<field name="arch" type="xml">
-				<notebook position="inside">
-					<page string="Sesiones">
-						<group>
-							<field name="instructor"/>
-							<field name="session_ids"/>
-						</group>
-					</page>
-				</notebook>
+					<group>
+						<field name="instructor"/>
+					</group>
 			</field>
 		</record>
 
@@ -35,7 +30,7 @@
                   action="contact_cat_list_action"/>
 
         <record model="res.partner.category" id="teacher1">
-            <field name="name">Teacher / Level 1</field>
+            <field name="name">Profesor</field>
         </record>
         <record model="res.partner.category" id="teacher2">
             <field name="name">Teacher / Level 2</field>

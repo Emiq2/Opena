@@ -5,7 +5,8 @@ class Partner(models.Model):
 	"""docstring for Parner"""
 	_inherit = 'res.partner'
 
-	instructor = fields.Boolean("instructor", default=False)
+	instructor = fields.Boolean("Tildar si es Instructor de Clase", default=False)
 
 	session_ids = fields.Many2many('openacademy.session', 
-		string="Asistentes de las sesiones", readonly=True)
+		string="Attended Sessions", readonly=True)
+
