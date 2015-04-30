@@ -8,7 +8,14 @@
 					<group>
 						<field name="instructor"/>
 					</group>
-			</field>
+ 					<notebook position="inside">
+	                    <page string="Sessions">
+	                        <group>
+	                            <field name="session_ids"/>
+	                        </group>
+	                    </page>
+                	</notebook> 
+            </field>
 		</record>
 
 		<record model="ir.actions.act_window" id="contact_list_action">
